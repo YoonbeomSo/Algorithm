@@ -1,3 +1,5 @@
+# #입출력과 사칙연산
+
 # print("HelloWorld")
 
 # print("강한친구 대한육군\n강한친구 대한육군")
@@ -41,7 +43,13 @@
 
 
 
-# #입출려과 사칙연산
+
+
+
+
+
+
+# #if문
 
 # #1330 두 수 비교하기
 # A,B=map(int,input().split())
@@ -99,5 +107,172 @@
 #     print(a+23, b-45+60)
 # else:
 #     print(a, b-45)
-print("git upload")
-print("윈도우 버젼 20211223")
+
+
+
+
+
+
+
+
+
+
+# #for문
+
+# #2739번 구구단
+# N = int(input())
+# for i in range(1,10):
+#     print(N,"*",i,"=",N*i)
+
+# #10950번 A+B-3
+
+# N =int(input())
+
+# for i in range(N):
+#     a, b = map(int,input().split())
+#     print(a+b)
+
+# #8393번 합
+
+# N = int(input())
+# sum = 0
+
+# for i in range(1,N+1):
+#     sum += i
+# print(sum)
+
+# #15552번 빠른A+B
+# import sys
+
+# N = int(input())
+# for i in range(N):
+#     A, B = map(int, sys.stdin.readline().split())
+#     print(A+B)
+
+# #2741번 N찍기
+# N = int(input())
+# for i in range(1,N+1):
+#     print(i)
+    
+# # 2742번 기찍N
+# N = int(input())
+# for i in range(N,0,-1):
+#     print(i)
+
+# # 11021 A+B -7
+# N = int(input())
+# for i in range(1,N+1):
+#     a, b = map(int,input().split())
+#     print(f"Case #{i}:", a+b) 
+    
+# # 11022 A+B -8
+# N = int(input())
+# for i in range(1,N+1):
+#     a, b = map(int, input().split())
+#     print(f"Case #{i}: {a} + {b} =",a+b)
+
+# #2438 별찍기 -1
+# N = int(input())
+# for i in range(1,N+1):
+#     print("*"*i)
+    
+# #2439 별찍기 -2
+# N = int(input())
+# for i in range(1,N+1):
+#     print(" "*(N-i) + "*"*i)
+
+
+# #10871 x보다 작은 수
+# N, X = map(int,input().split())
+# A = list(map(int,input().split()))
+# for i in range(N):
+#     if A[i]<X:
+#         print(A[i],end="")
+
+
+
+
+
+
+
+# #while문
+# #10952번 A+B -5
+# while True:
+#     a, b = map(int, input().split())
+#     if a == 0 and b == 0:
+#         break
+#     print(a+b)
+    
+# #10951번  A+B -4
+# while True:
+#     try:
+#         a, b = map(int, input().split())
+#         print (a+b)
+#     except:
+#         break
+
+# #1110번 더하기 사이클
+# n=int(input())
+# num=n
+# su=0
+# while True:
+#     a = num//10
+#     b = num%10
+#     c = (a+b) %10
+#     num = b*10 + c 
+#     su+=1
+#     if n == num:
+#         print(su)
+#         break
+
+
+
+
+
+
+
+
+# #1차원 배열
+
+# # 10818번 최소, 최대
+# N=int(input())
+# numbers = list(map(int,input().split()))
+# maxa=numbers[0]
+# mina=numbers[0]
+# for i in numbers :
+#     if i > maxa :
+#         maxa = i
+#     elif i < mina:
+#         mina = i
+# print(mina, maxa)
+
+## 2562번 최대값
+# su=[]
+# for i in range(0,9):
+#     su.append(int(input()))
+# maxa=su[0]
+# for i in su:
+#     if i >maxa:
+#         maxa = i
+# #maxa=max(su)
+# print(maxa)
+# print(su.index(maxa)+1)
+
+##2577번 숫자의 개수
+# A = int(input())
+# B = int(input())
+# C = int(input())
+# result=list(str(A*B*C))
+# for i in range(10):
+#     print(result.count(str(i)))
+
+##3052번 나머지
+li=[]
+for i in range(10):
+    li.append((int(input()))%42)
+sli = set(li)
+print(len(sli))
+
+print("mac upload")
+print("20211226.")
+
