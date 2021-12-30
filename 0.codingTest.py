@@ -286,22 +286,36 @@
 # print(int(sum(li2))/ea)  
 
 # #8958번 OX퀴즈
-ea = int(input())
+# ea = int(input())
+# for i in range(ea):
+#     data = input()
+#     score = 0
+#     point = 1
+#     for i in data:
+#         if i == "O":
+#             score+=point
+#             point+=1
+#         else:
+#             point = 1
+#     print(score)
 
 
-for i in range(ea):
-    data = input()
-    score = 0
-    point = 1
-    for i in data:
-        if i == "O":
-            score+=point
-            point+=1
-        else:
-            point = 1
-    print(score)
+# #4344번 평균은 넘겠지
+
+# nea = int(input())
+# for i in range(nea):
+#     score = list(map(int,input().split()))
+#     average = sum(score[1:])/score[0]
+#     su = 0
+#     for j in score[1:]:
+#         if j > average:
+#             su += 1
+#     re = su/score[0]*100
+#     print(f"{re:.3f}%")
 
 
-# print("Windows Upload")
-# print("20211229")
+print("Windows Upload")
+print("20211230")
+
+
 
