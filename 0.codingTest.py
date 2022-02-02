@@ -451,9 +451,44 @@
 #         group_word += 1
 # print(group_word)
 
-        
+# #1712번 손익분기점
+# a,b,c = map(int,input().split())
+# if b >= c:
+#     print(-1)
+# else:
+#     print((a//(c-b))+1)
+# #a+b*n = c * n
+# #n(c-b)=a
+# #n=a//(c-b)
+
+# #2292번 벌집
+# n=int(input())
+# su=1 #벌집의 개수
+# increase=1 #반복 횟수
+# while n > su:
+#     su += 6 * increase
+#     increase += 1
+# print(increase)
+
+#1193번 분수찾기 
+num=int(input())
+line=1
+max_num=1
+while num>max_num:
+    line+=1
+    max_num+=line
+gap=max_num-num
+if line%2==0:
+    top=line-gap
+    low=gap+1
+else :
+    top=gap+1
+    low=line-gap
+print(f'{top}/{low}')
+
+
 
 
 
 # print("Windows Upload")
-# print("2022012029")
+# print("20220129")
