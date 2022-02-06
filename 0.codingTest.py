@@ -470,25 +470,41 @@
 #     increase += 1
 # print(increase)
 
-#1193번 분수찾기 
-num=int(input())
-line=1
-max_num=1
-while num>max_num:
-    line+=1
-    max_num+=line
-gap=max_num-num
-if line%2==0:
-    top=line-gap
-    low=gap+1
-else :
-    top=gap+1
-    low=line-gap
-print(f'{top}/{low}')
+# #1193번 분수찾기 
+# num=int(input())
+# line=1
+# max_num=1
+# while num>max_num:
+#     line+=1
+#     max_num+=line
+# gap=max_num-num
+# if line%2==0:
+#     top=line-gap
+#     low=gap+1
+# else :
+#     top=gap+1
+#     low=line-gap
+# print(f'{top}/{low}')
 
 
+# #2869번 달팽이는 올라가고 싶다
+# import math
+# A, B, V = map(int,input().split())
+# day=math.ceil((V-A)/(A-B))+1
+# print(day)
 
+#10250번  ACM호텔
+a=int(input())
+
+for i in range(a):
+    H, W, N = map(int,input().split())
+    floor = (N % H)
+    room = (N // H) + 1
+    if N % H == 0:
+        floor = H
+        room = N // H
+    print(f'{floor*100+room}')
 
 
 # print("Windows Upload")
-# print("20220129")
+# print("20220206")
