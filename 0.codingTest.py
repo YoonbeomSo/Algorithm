@@ -493,18 +493,34 @@
 # day=math.ceil((V-A)/(A-B))+1
 # print(day)
 
-#10250번  ACM호텔
-a=int(input())
+# #10250번  ACM호텔
+# a=int(input())
 
-for i in range(a):
-    H, W, N = map(int,input().split())
-    floor = (N % H)
-    room = (N // H) + 1
-    if N % H == 0:
-        floor = H
-        room = N // H
-    print(f'{floor*100+room}')
+# for i in range(a):
+#     H, W, N = map(int,input().split())
+#     floor = (N % H)
+#     room = (N // H) + 1
+#     if N % H == 0:
+#         floor = H
+#         room = N // H
+#     print(f'{floor*100+room}')
 
 
-# print("Windows Upload")
-# print("20220206")
+# #2775번 부녀회장이 될테야
+
+n = int(input())
+for i in range(n):
+    floor = int(input())
+    room = int(input())
+    f0 = [x for x in range(1,room+1)] #comprehension
+    for j in range(floor):
+        for k in range(1,room):
+            f0[k] += f0[k-1]
+    print(f0[-1])
+
+
+
+
+
+print("Windows Upload")
+print("20220210")
