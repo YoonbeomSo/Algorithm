@@ -495,7 +495,6 @@
 
 # #10250번  ACM호텔
 # a=int(input())
-
 # for i in range(a):
 #     H, W, N = map(int,input().split())
 #     floor = (N % H)
@@ -507,20 +506,34 @@
 
 
 # #2775번 부녀회장이 될테야
+# n = int(input())
+# for i in range(n):
+#     floor = int(input())
+#     room = int(input())
+#     f0 = [x for x in range(1,room+1)] #comprehension
+#     for j in range(floor):
+#         for k in range(1,room):
+#             f0[k] += f0[k-1]
+#     print(f0[-1])
 
-n = int(input())
-for i in range(n):
-    floor = int(input())
-    room = int(input())
-    f0 = [x for x in range(1,room+1)] #comprehension
-    for j in range(floor):
-        for k in range(1,room):
-            f0[k] += f0[k-1]
-    print(f0[-1])
+# #2839번 설탕 배달
+N = int(input())
+bag = 0
+while N >= 0:
+    if N % 5 == 0:
+        bag += N//5
+        print(bag)
+        break
+    N -= 3
+    bag += 1
+else :
+    print(-1)
 
 
 
 
 
-print("Windows Upload")
-print("20220210")
+
+
+# print("Windows Upload")
+# print("20220212")
