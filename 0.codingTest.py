@@ -517,20 +517,22 @@
 #     print(f0[-1])
 
 # #2839번 설탕 배달
-N = int(input())
-bag = 0
-while N >= 0:
-    if N % 5 == 0:
-        bag += N//5
-        print(bag)
-        break
-    N -= 3
-    bag += 1
-else :
-    print(-1)
+# N = int(input())
+# bag = 0
+# while N >= 0:
+#     if N % 5 == 0:
+#         bag += N//5
+#         print(bag)
+#         break
+#     N -= 3
+#     bag += 1
+# else :
+#     print(-1)
 
 
-
+#10757번 큰 수 A+B
+a, b = map(int,input().split())
+print(a+b)
 
 
 
