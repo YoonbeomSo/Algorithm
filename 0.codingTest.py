@@ -517,17 +517,17 @@
 #     print(f0[-1])
 
 # #2839번 설탕 배달
-N = int(input())
-bag = 0
-while N >= 0:
-    if N % 5 == 0:
-        bag += N//5
-        print(bag)
-        break
-    N -= 3
-    bag += 1
-else :
-    print(-1)
+# N = int(input())
+# bag = 0
+# while N >= 0:
+#     if N % 5 == 0:
+#         bag += N//5
+#         print(bag)
+#         break
+#     N -= 3
+#     bag += 1
+# else :
+#     print(-1)
 
 
 #10757번 큰 수 A+B
@@ -571,21 +571,39 @@ else :
 #     print(-1)
 
 
-#11653 소인수분해
-N=int(input())
-while True:
-    if N <= 1:
-        break
-    check=0
-    for i in range(2,N+1):
-        if N%i==0:
-            print(i)
-            N//=i
-            check=1
-            break
-    if check==0:
-        break
-            
+# #11653 소인수분해
+# N=int(input())
+# while True:
+#     if N <= 1:
+#         break
+#     check=0
+#     for i in range(2,N+1):
+#         if N%i==0:
+#             print(i)
+#             N//=i
+#             check=1
+#             break
+#     if check==0:
+#         break
+
+
+#1929번 소수 구하기
+
+def isPrime(i):
+    if i>1:
+        for j in range(2,int(i**(0.5))+1):
+            if i%j==0:
+                 return False
+        return True
+    else:
+        return False
+
+M,N =map(int,input().split())
+for i in range(M,N+1):
+    if isPrime(i):
+        print(i)    
+
+                
                
                 
             
