@@ -531,11 +531,72 @@ else :
 
 
 #10757번 큰 수 A+B
-a, b = map(int,input().split())
-print(a+b)
+# a, b = map(int,input().split())
+# print(a+b)
 
 
+#1978번 소수 찾기
+# n = int(input())
+# allsu = map(int,input().split())
+# sosu=0
+
+# for i in allsu:
+#     check=0
+#     if i >1 :
+#         for j in range(2,i):
+#             if i%j == 0:
+#                 check=1
+#         if check==0: 
+#             sosu +=1
+# print(sosu)    
 
 
-# print("Windows Upload")
-# print("20220212")
+# #2581번 소수
+# M = int(input())
+# N = int(input())
+# sosu=[]
+# for i in range(M,N+1):
+#     check=0
+#     if i>1:
+#         for j in range(2,i):
+#             if i%j==0:
+#                 check=1
+#                 break
+#         if check==0:
+#             sosu.append(i)
+# if len(sosu)>0:
+#     print(sum(sosu))
+#     print(min(sosu))
+# else:
+#     print(-1)
+
+
+#11653 소인수분해
+N=int(input())
+while True:
+    if N <= 1:
+        break
+    check=0
+    for i in range(2,N+1):
+        if N%i==0:
+            print(i)
+            N//=i
+            check=1
+            break
+    if check==0:
+        break
+            
+               
+                
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+
+# print("20220302")
