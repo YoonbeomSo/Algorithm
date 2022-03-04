@@ -571,20 +571,20 @@
 #     print(-1)
 
 
-#11653 소인수분해
-N=int(input())
-while True:
-    if N <= 1:
-        break
-    check=0
-    for i in range(2,N+1):
-        if N%i==0:
-            print(i)
-            N//=i
-            check=1
-            break
-    if check==0:
-        break
+# #11653 소인수분해
+# N=int(input())
+# while True:
+#     if N <= 1:
+#         break
+#     check=0
+#     for i in range(2,N+1):
+#         if N%i==0:
+#             print(i)
+#             N//=i
+#             check=1
+#             break
+#     if check==0:
+#         break
             
                
                 
@@ -599,4 +599,4 @@ while True:
         
     
 
-# print("20220302")
+# print("20220303")
