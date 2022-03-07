@@ -624,19 +624,25 @@
 # print(d[0],d[1])
 
 
-#4153번 직각삼각형
-while True:
-    triangle_list=list(map(int,input().split()))
-    if sum(triangle_list) == 0:
-        break
-    maxsu=max(triangle_list)
-    triangle_list.remove(maxsu)
-    if triangle_list[0]**2+triangle_list[1]**2 == maxsu**2:
-        print("right")
-    else:
-        print("wrong")
+#  #4153번 직각삼각형
+# while True:
+#     triangle_list=list(map(int,input().split()))
+#     if sum(triangle_list) == 0:
+#         break
+#     maxsu=max(triangle_list)
+#     triangle_list.remove(maxsu)
+#     if triangle_list[0]**2+triangle_list[1]**2 == maxsu**2:
+#         print("right")
+#     else:
+#         print("wrong")
+
+
+from math import pi
+r = int(input())
+print(f'{pi*(r**2):.6f}')
+print(f'{2*(r**2):.6f}')
 
 
 
 
-#commit -m "20220306"
+#commit -m "20220307_1"
