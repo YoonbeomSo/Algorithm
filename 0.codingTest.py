@@ -572,7 +572,7 @@
 
 
 # #11653 소인수분해
-# N=int(input())
+# N=it(input())
 # while True:
 #     if N <= 1:
 #         break
@@ -585,40 +585,58 @@
 #             break
 #     if check==0:
 #         break
-<<<<<<< HEAD
-            
-=======
 
 
-#1929번 소수 구하기
+# #1929번 소수 구하기
+# def isPrime(i):
+#     if i>1:
+#         for j in range(2,int(i**(0.5))+1):
+#             if i%j==0:
+#                  return False
+#         return True
+#     else:
+#         return False
 
-def isPrime(i):
-    if i>1:
-        for j in range(2,int(i**(0.5))+1):
-            if i%j==0:
-                 return False
-        return True
+# M,N =map(int,input().split())
+# for i in range(M,N+1):
+#     if isPrime(i):
+#         print(i)      
+              
+              
+              
+# #1085번 직사각형에서 탈출
+# x,y,W,H = map(int,input().split())
+# print(min(x,y,H-y,W-x))
+
+
+# #3009번 네 번째 점
+# a = list(map(int,input().split()))
+# b = list(map(int,input().split()))
+# c = list(map(int,input().split()))
+# d = []
+
+# for i in range(0,2):
+#     d.append(a[i])
+#     if a[i]==b[i]:
+#         d[i]=c[i]
+#     elif a[i]==c[i]:
+#         d[i]=b[i]
+# print(d[0],d[1])
+
+
+#4153번 직각삼각형
+while True:
+    triangle_list=list(map(int,input().split()))
+    if sum(triangle_list) == 0:
+        break
+    maxsu=max(triangle_list)
+    triangle_list.remove(maxsu)
+    if triangle_list[0]**2+triangle_list[1]**2 == maxsu**2:
+        print("right")
     else:
-        return False
+        print("wrong")
 
-M,N =map(int,input().split())
-for i in range(M,N+1):
-    if isPrime(i):
-        print(i)    
 
-                
->>>>>>> refs/remotes/origin/master
-               
-                
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
 
-# print("20220303")
+
+#commit -m "20220306"
