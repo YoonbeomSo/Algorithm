@@ -637,12 +637,28 @@
 #         print("wrong")
 
 
-from math import pi
-r = int(input())
-print(f'{pi*(r**2):.6f}')
-print(f'{2*(r**2):.6f}')
+# #3053번 택시 기하학
+# from math import pi
+# r = int(input())
+# print(f'{pi*(r**2):.6f}')
+# print(f'{2*(r**2):.6f}')
 
 
+#1002번 터렛
+import math
+n=int(input())
+for _ in range(n):
+    a,b,r1,x,y,r2=map(int,input().split())
+    r = math.sqrt((x-a)**2 + (y-b)**2)
+    if r==0 and r1==r2:
+        print(-1)
+    elif abs(r1-r2) < r < r1+r2:
+        print(2)
+    elif r1+r2 == r or abs(r1-r2)==r:
+        print(1)
+    else:
+        print(0)
+ 
 
 
-#commit -m "20220307_1"
+#commit -m "20220310"
