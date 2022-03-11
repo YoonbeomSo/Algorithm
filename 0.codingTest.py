@@ -601,8 +601,7 @@
 # for i in range(M,N+1):
 #     if isPrime(i):
 #         print(i)      
-              
-              
+                           
               
 # #1085번 직사각형에서 탈출
 # x,y,W,H = map(int,input().split())
@@ -644,21 +643,89 @@
 # print(f'{2*(r**2):.6f}')
 
 
-#1002번 터렛
-import math
-n=int(input())
-for _ in range(n):
-    a,b,r1,x,y,r2=map(int,input().split())
-    r = math.sqrt((x-a)**2 + (y-b)**2)
-    if r==0 and r1==r2:
-        print(-1)
-    elif abs(r1-r2) < r < r1+r2:
-        print(2)
-    elif r1+r2 == r or abs(r1-r2)==r:
-        print(1)
-    else:
-        print(0)
+# #1002번 터렛
+# import math
+# n=int(input())
+# for _ in range(n):
+#     a,b,r1,x,y,r2=map(int,input().split())
+#     r = math.sqrt((x-a)**2 + (y-b)**2)
+#     if r==0 and r1==r2:
+#         print(-1)
+#     elif abs(r1-r2) < r < r1+r2:
+#         print(2)
+#     elif r1+r2 == r or abs(r1-r2)==r:
+#         print(1)
+#     else:
+#         print(0)
  
+# #4948번 베르트랑 공준
+# #1. 시간초과 코드
+# while True:
+#     n = int(input())
+#     sosu=[]
+#     if n==0:
+#         break
+#     else:
+#         for i in range(n+1,2*n+1):
+#             check=0 
+#             for j in range(2,i):
+#                 if i%j==0:
+#                     check=1
+#                     break
+#             if check==0:
+#                 sosu.append(i)
+#     print(len(sosu))
+
+# #2. 정답 코드
+# sosu = {x for x in range(2, 246913) if x == 2 or x%2==1}
+# for odd_num in range(3,int(246912**(0.5)+1),2):
+#     sosu -= {i for i in range(2*odd_num,246913,odd_num) if i in sosu}
+    
+# while True:
+#     n = int(input())
+#     if n == 0 :
+#         break
+#     sosu_list=[i for i in range(n+1, 2*n+1) if i in sosu]
+#     print(len(sosu_list)) 
 
 
-#commit -m "20220310"
+# #9020번 골드바흐의 추측
+# #1. 시간초과 코드
+# sosu = {x for x in range(2, 10001) if x ==2 or x%2==1}
+# for odd_num in range(3, int(10001**(0.5)+1),2):
+#     sosu -= {i for i in range(2*odd_num, 10001, odd_num) if i in sosu}
+# n=int(input())
+# for _ in range(n):
+#     x = int(input())
+#     sosu_x = [i for i in sosu if i<=x]
+#     check=0
+#     for i in range(0,len(sosu_x)-1):
+#         for j in range(0,i+1):
+#             if(sosu_x[i] + sosu_x[j] == x):
+#                 if(sosu_x[i]>sosu_x[j]):
+#                     print(sosu_x[j], sosu_x[i])
+#                     check=1
+#                     break
+#                 print(sosu_x[i], sosu_x[j])
+#                 check=1
+#                 break
+#         if check==1:
+#             break
+        
+# #2. 정답 코드
+# sosu = {x for x in range(2, 10001) if x==2 or x%2==1}
+# for odd_num in range(3, int(10000**(0.5)+1),2):
+#     sosu -= {i for i in range(2*odd_num, 10001, odd_num) if i in sosu}
+# n=int(input())
+# for _ in range(n):
+#     x = int(input())
+#     a = x//2
+#     for k in range(a, 1, -1):
+#         if (k in sosu) and (x-k in sosu):
+#             print(k,x-k)
+#             # break
+
+
+
+
+#commit -m "20220311"
