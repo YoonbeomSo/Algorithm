@@ -19,4 +19,3 @@ for plan in range(plans):
             continue
     x, y = nx, ny
 print(x,y)
-        
