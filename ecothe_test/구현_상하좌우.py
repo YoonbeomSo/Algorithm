@@ -15,5 +15,4 @@ for plan in plans:
     if target_x >= 1 and target_x <= n and target_y >=1 and target_y <= n:
         x = target_x
         y = target_y
-    
 print(x, y)
