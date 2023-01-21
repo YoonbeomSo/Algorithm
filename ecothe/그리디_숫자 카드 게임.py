@@ -1,7 +1,7 @@
 from this import d
 
 
-N, M = int(input().split())
+N, M = map(int,input().split())
 
 result = 0
 for _ in range(N):
